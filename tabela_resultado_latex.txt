@@ -1,0 +1,44 @@
+\begin{table}[H]
+    \centering
+    \caption{Resultados das métricas (em \%) da aplicação das redes neurais convolucionais nos conjuntos de treinamento (90\% dos dados com validação cruzada k-fold) e teste (10\% dos dados) considerando o critério de rotulagem de \textbf{Tolerância e Produtividade - 4 Classes} para todas idades alvo.}
+    \renewcommand{\arraystretch}{1.5}
+    \footnotesize
+    \begin{tabularx}{455pt}{lccccccc}
+        \hline
+        \multicolumn{8}{c}{\textbf{Tolerância e Produtividade - 4 classes}} \\ \hline
+        \textbf{Arquitetura} & \textbf{Acurácia}\textsuperscript{Tr} & \textbf{Acurácia}\textsuperscript{Va} & \textbf{Acurácia}\textsuperscript{Te} & \textbf{Precisão}\textsuperscript{Te} & \textbf{Recall}\textsuperscript{Te} & \textbf{F1-score}\textsuperscript{Te} & \textbf{Perda}\textsuperscript{Te} \\ \hline
+        \multicolumn{8}{c}{\textbf{Idade Alvo: 18 meses}} \\
+        
+        MobileNetV2 & 99.96 & 65.23 & 68.55 & 75.92 & 52.79 & 57.61 & 2.36 \\
+        Resnet50 & 99.99 & 67.19 & 66.97 & 66.45 & 55.96 & 59.31 & 1.83 \\ 
+        Xception & 99.99 & 68.88 & 67.19 & 67.08 & 52.62 & 57.32 & 1.15 \\ \hline
+        
+        \multicolumn{8}{c}{\textbf{Idade Alvo: 30 meses}} \\
+        
+        MobileNetV2 & 99.99 & 67.45 & 67.04 & 60.08 & 61.86 & 60.87 & 1.89 \\
+        Resnet50 & 99.99 & 62.76 & 66.59 & 66.42 & 57.27 & 60.45 & 2.37 \\ 
+        Xception & 99.99 & 66.54 & 63.21 & 57.49 & 52.53 & 54.16 & 1.48 \\ \hline
+        
+        \multicolumn{8}{c}{\textbf{Idade Alvo: 36 meses}} \\ 
+        
+        MobileNetV2 & 99.99 & 66.41 & 66.14 & 65.06 & 62.37 & 63.58 & 2.20 \\
+        Resnet50 & 99.99 & 65.63 & 67.49 & 63.26 & 67.38 & 65.06 & 1.86 \\ 
+        Xception & 99.99 & 70.70 & 62.98 & 54.92 & 55.87 & 55.09 & 1.52 \\ \hline
+        
+        \multicolumn{8}{c}{\textbf{Idade Alvo: 42 meses}} \\
+        
+        MobileNetV2 & 99.99 & 68.49 & 67.49 & 64.41 & 59.96 & 61.84 & 2.52 \\
+        Resnet50 & 99.99 & 68.23 & 67.04 & 63.78 & 61.62 & 62.62 & 1.74 \\ 
+        Xception & \textbf{99.99} & \textbf{72.00} & \textbf{71.56} & \textbf{69.87} & \textbf{60.68} & \textbf{63.86} & \textbf{1.11} \\ \hline
+        
+    \end{tabularx}
+    \renewcommand{\arraystretch}{1.5} % Restaure o valor padrão
+    \begin{tabularx}{455pt}{@{} p{\linewidth} @{}}
+        \footnotesize
+        \textsuperscript{Tr} Conjunto de Treinamento \\
+        \textsuperscript{Va} Conjunto de Validação \\
+        \textsuperscript{Te} Conjunto de Teste \\
+    \end{tabularx}
+    \label{table:resultados_imagens}
+\end{table}
+
